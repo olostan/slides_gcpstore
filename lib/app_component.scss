@@ -1,3 +1,4 @@
+/* dacsslide.dunits = vmin */
 my-app presentation symbol div {
   font-size: 4vw;
 }
@@ -29,25 +30,25 @@ my-app presentation symbol div {
   img { height: 50vh;}
 }
 #name{ 
-  font-size: 70px;
+  font-size: 6vmax;
   padding-bottom: 20px;
   border-bottom: solid 1px black;
   ::right(1400) up(200);
   
 }
 #gde{ 
-  font-size: 40px;
-  ::right(1400) up(80);
+  font-size: 2.5vw;
+  ::right(1300) up(80);
 }
 #home{ 
-  font-size: 40px;
-  ::right(1400) up(20);
+  font-size: 3vw;
+  ::right(1350) up(20);
   span { color: #999;}
   a { text-decoration: none; }
   
 }
 #logo {
-  ::show up(400) scale(0.5,0.5);
+  ::show up(300) scale(0.5,0.5);
 }
 
 .s2 {
@@ -79,7 +80,7 @@ my-app presentation symbol div {
 presentation.s3 { background-color: black; }
 #data_a { 
   text-align: center;
-  ::rotate(80) up(400);
+  ::rotateX(80) up(400);
   width: 80vw;
   color: white;  
   b { color: yellow; font-weight: bolder;font-family: 'Fira Code';} 
@@ -89,7 +90,7 @@ presentation.s3 { background-color: black; }
     ::up(300);
     transition-timing-function: ease-out;
   }
-  #data_a: rotate(-80) down(400) show;
+  #data_a: rotateX(-80) down(400) show;
 }
 #q1, #q1_a, #q2, #q2_a { 
   transition-timing-function: cubic-bezier(0.7,-0.54, 0.65, 2.3);
@@ -107,33 +108,33 @@ presentation.s3 { background-color: black; }
   ::scale(0.4,0.4) up(240);
 }
 #q1_a {
-  font-size: 2vw; color: #999;
-  ::up(50) scale(0.4,0.4);
+  font-size: 2.5vw; color: #999;
+  ::up(150) scale(0.4,0.4) left(50);
 }
-#q1_i: down(560) rotate(80) left(200);
+#q1_i: down(560) rotateX(80) left(200);
 .s5 { 
-  #data_q: rotate(80) up(500) hide;
-  #data_a: rotate(-80) down(400) hide;
-  #q1_i: show up(400) rotate(-80);  
-  #q1: show scale(0.6,0.6) up(40);   
-  #q1_a: show scale(0.6,0.6) delay(0.2);   
+  #data_q: rotateX(80) up(500) hide;
+  #data_a: rotateX(-80) down(400) hide;
+  #q1_i: show up(450) rotateX(-80);  
+  #q1: show scale(1) up(40);   
+  #q1_a: show scale(1) delay(0.2);   
 }
 #q2 { 
   ::scale(0.4,0.4) up(240);
 }
 #q2_a {
-  font-size: 2vw; color: #999;
-  ::up(50) scale(0.4,0.4);
+  font-size: 2.5vw; color: #999;
+  ::up(100) scale(0.4,0.4);
 }
-#q2_i: down(500) rotate(80) left(200);
+#q2_i: down(500) rotateX(80) left(200);
 .s6 {
-  #q1: rotate(-90) down(200) hide;
-  #q1_a: rotate(-90) down(200) hide;
-  #q1_i: rotate(-90) down(200) hide;
+  #q1: rotateX(-90) down(200) hide;
+  #q1_a: rotateX(-90) down(200) hide;
+  #q1_i: rotateX(-90) down(200) hide;
   
-  #q2_i: show up(400) rotate(-80) delay(0.2);
-  #q2: show scale(0.6,0.6) delay(0.4);   
-  #q2_a: show scale(0.6,0.6) delay(0.6);   
+  #q2_i: show up(400) rotateX(-80) delay(0.2);
+  #q2: show scale(1) delay(0.4);   
+  #q2_a: show scale(1) delay(0.6);   
   #bg { background-image:linear-gradient(black,#EEE);  }  
   
 }
@@ -152,9 +153,9 @@ presentation.s3 { background-color: black; }
 .s7 {
   #bg { opacity: 0.7;}    
   #data_q2: show scale(0.6,0.6) delay(0.4); 
-  #q2: rotate(-90) down(200) hide;
-  #q2_a: rotate(-90) down(200) hide;
-  #q2_i: rotate(-90) down(200) hide;
+  #q2: rotateX(-90) down(200) hide;
+  #q2_a: rotateX(-90) down(200) hide;
+  #q2_i: rotateX(-90) down(200) hide;
   #data_matrix {   opacity: 1; visibility: visible;  }
 }
 #data_matrix {
@@ -183,14 +184,14 @@ presentation.s3 { background-color: black; }
 .s8 {
   #data_q2{ 
     transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);    
-    ::up(450) scale(-0.3,-0.3) delay(0);   
+    ::up(250) scale(0.6,0.6) delay(0);   
   }
   #data_matrix img { transform: rotateX(0) scale(1); opacity: 1; }
 }
 #data_q3{ ::left(500); color: white; font-size: 6vw; width: 80vw;text-align: center;
  span { color: #888;}}
 .s9 {
-  #data_matrix: down(400) rotate(20);
+  #data_matrix: down(400) rotateX(20);
   #data_matrix {
     img { transform: rotateX(90) translateX(-200px); opacity: 0; }  
     img:nth-child(1) { transition-delay: 0.0s;  }  
@@ -203,7 +204,7 @@ presentation.s3 { background-color: black; }
     img:nth-child(8) { transition-delay: 0.4s;  }  
     img:nth-child(9) { transition-delay: 0.5s;  }  
   }
-  #data_q2: up(140) rotate(50) hide;
+  #data_q2: up(140) rotateX(50) hide;
   #data_q3: right(500) delay(0.5) show;
   #bg { opacity: 0; }      
 }
@@ -245,13 +246,13 @@ presentation.s3 { background-color: black; }
   color: white;
   width: 80vw;
   text-align: center;
-  ::rotate(0,-90);
+  ::rotateY(-90);
   span { color: lightgreen;}
   b { color: yellow;}
 }
 .s13 {
-  #data_str_no: rotate(0,90) hide;  
-  #data_str_un: rotate(0,90) show delay(0.5);
+  #data_str_no: rotateY(90) hide;  
+  #data_str_un: rotateY(90) show delay(0.5);
   #bg { background-image:linear-gradient(white, #AAA); }
   
 }
@@ -265,21 +266,19 @@ presentation.s3 { background-color: black; }
 }
 
 .s14 {
-  #data_a3: up(200) delay(0) opacity(0) scale(-0.2,-0.2);
-  #data_str: up(200) delay(0) opacity(0) scale(-0.2,-0.2);
+  #data_a3: up(200) delay(0) opacity(0) scale(0.2,0.2) hide;
+  #data_str: up(200) delay(0) opacity(0) scale(0.2,0.2) hide;
   #bg{ opacity: 1; }
   #data_str_un{ 
-    ::up(400) delay(0) scale(0.8,0.8); color: black;
-    span { color: #040;}
-    b { color: #440;}
+    ::up(300) delay(0) scale(0.5,0.5) hide;
   }
-  #cloud_storage: left(300) show;
-  #cloud_storage_logo: right(300) show;
+  #cloud_storage: left(400) show;
+  #cloud_storage_logo: right(400) show;
 }
 .s15 {
   #data_str_un: up(300) hide;
-  #cloud_storage: up(300);
-  #cloud_storage_logo: up(300);  
+  #cloud_storage: up(100);
+  #cloud_storage_logo: up(100);  
 }
 #cloud_storage_s { width: 90vw;text-align: center; ::down(300);}
 #cloud_storage_d { width: 90vw;text-align: center; ::down(300);}
@@ -291,17 +290,17 @@ presentation.s3 { background-color: black; }
 .s17 {
   #cloud_storage: up(60);
   #cloud_storage_logo: up(60);  
-  #cloud_storage_s: up(180);
+  #cloud_storage_s: up(100);
   #cloud_storage_d: up(300) show;
 }
-#cloud_storage_c: scale(0.8,0.8) rotate(0,-90);
+#cloud_storage_c: scale(0.8,0.8) rotateY(-90);
 .s18 {
-  #cloud_storage: rotate(0,90) hide;
-  #cloud_storage_logo: rotate(0,90) hide;  
-  #cloud_storage_s: rotate(0,90) hide;
-  #cloud_storage_d: rotate(0,90) hide;
+  #cloud_storage: rotateY(90) hide;
+  #cloud_storage_logo: rotateY(90) hide;  
+  #cloud_storage_s: rotateY(90) hide;
+  #cloud_storage_d: rotateY(90) hide;
 
-  #cloud_storage_c: show rotate(0,90) delay(0.5);
+  #cloud_storage_c: show rotateY(90) delay(0.5);
 }
 #data_semi_q{ 
   color: white;
@@ -310,7 +309,7 @@ presentation.s3 { background-color: black; }
 }
 .s19 {
   #bg{ opacity: 0;}
-  #cloud_storage_c: hide up(300) rotate(-90) delay(0);  
+  #cloud_storage_c: hide up(300) rotateX(-90) delay(0);  
   #data_semi_q: show up(600) delay(0.2);
 }
 #data_semi{ 
@@ -329,7 +328,7 @@ presentation.s3 { background-color: black; }
   ::down(400) right(80);
   font-size: 6vw;
 }
-#bigtable_logo: down(400) left(380);
+#bigtable_logo: down(400) left(300);
 .s21 {
   #data_semi: up(700) hide;  
   #data_semi_q: up(700) hide;  
@@ -367,15 +366,15 @@ presentation.s3 { background-color: black; }
   #bigtable_d3: up(50);
   #bigtable_d4: up(150) show;
 }
-#bigtable_s: rotate(90) down(500);
+#bigtable_s: rotateX(90) down(500);
 .s25 {
   #bigtable: up(200);
   #bigtable_logo: up(200);  
-  #bigtable_d: rotate(-90) hide up(200);
-  #bigtable_d2: rotate(-90) hide up(200);
-  #bigtable_d3: rotate(-90) hide up(200);
-  #bigtable_d4: rotate(-90) hide up(200);
-  #bigtable_s: rotate(-90) show up(500) delay(0.4);
+  #bigtable_d: rotateX(-90) hide up(200);
+  #bigtable_d2: rotateX(-90) hide up(200);
+  #bigtable_d3: rotateX(-90) hide up(200);
+  #bigtable_d4: rotateX(-90) hide up(200);
+  #bigtable_s: rotateX(-90) show up(500) delay(0.4);
 }
 #data_ana { color: white; width: 80vw; ::down(300); text-align: center;font-size:6vw;
   b { color: yellow;}
@@ -383,7 +382,7 @@ presentation.s3 { background-color: black; }
 .s26 {
   #bigtable: up(200) hide;
   #bigtable_logo: up(200) hide;    
-  #bigtable_s: rotate(-90) hide up(500) delay(0);  
+  #bigtable_s: rotateX(-90) hide up(500) delay(0);  
   #bg { opacity: 0;}
   #data_ana: up(300) show delay(0.2);
 }
@@ -412,16 +411,16 @@ presentation.s3 { background-color: black; }
   #bigquery_d: up(100);
   #bigquery_d2: up(300) show;
 }
-#bigquery_s: rotate(90) down(500);
+#bigquery_s: rotateX(90) down(500);
 .s30 {
   #bigquery: up(270);
   #bigquery_logo: up(270);  
-  #bigquery_d: rotate(-90) hide up(200);
-  #bigquery_d2: rotate(-90) hide up(200);
-  #bigquery_s: rotate(-90) show up(280) delay(0.4);
+  #bigquery_d: rotateX(-90) hide up(200);
+  #bigquery_d2: rotateX(-90) hide up(200);
+  #bigquery_s: rotateX(-90) show up(280) delay(0.4);
 }
 .s31 {
-  #bigquery_s: up(350) delay(0);
+  #bigquery_s: up(500) delay(0);
 }
 #data_hier { color: white; width: 80vw; ::down(300); text-align: center;font-size:6vw;
   b { color: yellow;}
@@ -430,7 +429,7 @@ presentation.s3 { background-color: black; }
 .s32 {
   #bigquery: up(200) hide;
   #bigquery_logo: up(200) hide;    
-  #bigquery_s: rotate(-90) hide up(500) delay(0);  
+  #bigquery_s: rotateX(-90) hide up(500) delay(0);  
   #bg { opacity: 0;}
   #data_hier: up(300) show delay(0.2);
 }
@@ -439,7 +438,7 @@ presentation.s3 { background-color: black; }
   ::down(400) right(80);
   font-size: 6vw;
 }
-#datastore_logo: down(400) left(380);
+#datastore_logo: down(400) left(300);
 
 .s33 {
   #datastore: up(400) show;
@@ -460,16 +459,16 @@ presentation.s3 { background-color: black; }
   #datastore_d: up(100);
   #datastore_d2: up(300) show;
 }
-#datastore_s: rotate(90) down(500);
+#datastore_s: rotateX(90) down(500);
 .s36 {
   #datastore: up(270);
   #datastore_logo: up(270);  
-  #datastore_d: rotate(-90) hide up(200);
-  #datastore_d2: rotate(-90) hide up(200);
-  #datastore_s: rotate(-90) show up(460) delay(0.4);
+  #datastore_d: rotateX(-90) hide up(200);
+  #datastore_d2: rotateX(-90) hide up(200);
+  #datastore_s: rotateX(-90) show up(490) delay(0.4);
 }
 #too_complex_t{ 
-  color: white;font-size:5vw; background-color: rgba(200,200,200,0.4);
+  color: white;font-size:5vw; background-color: rgba(200,200,200,0.7);
   padding: 25px;
   box-shadow: 0 0 50px red;
   ::down(600);
@@ -497,9 +496,9 @@ presentation.s3 { background-color: black; }
 
 
 .s38 {
-  #datastore_s: rotate(-90) hide up(660) delay(0.1);  
-  #too_complex: rotate(-90) hide up(460);
-  #too_complex_t: rotate(-90) hide up(460);
+  #datastore_s: rotateX(-90) hide up(660) delay(0.1);  
+  #too_complex: rotateX(-90) hide up(460);
+  #too_complex_t: rotateX(-90) hide up(460);
   #fb_db: up(400) show;
   #fb_db_logo: up(400) show;
   #bg { background-image:linear-gradient(#EEE,#FFE 78%, #ffc107); opacity: 1; }  
@@ -523,19 +522,19 @@ presentation.s3 { background-color: black; }
 }
 
 .s40 {  
-  #fb_db: up(200);
-  #fb_db_logo: up(200);
-  #fb_db_d: up(200) delay(0.4);
-  #fb_db_d2: show up(400);
-}
-#fb_db_s: down(840) rotate(90);
-
-.s41 {  
   #fb_db: up(100);
   #fb_db_logo: up(100);
-  #fb_db_d: up(200) hide rotate(-90) delay(0);
-  #fb_db_d2: up(400) hide rotate(-90) delay(0.2);
-  #fb_db_s: up(800) rotate(-90) show delay(0.4);
+  #fb_db_d: up(150) delay(0.4);
+  #fb_db_d2: show up(450);
+}
+#fb_db_s: down(840) rotateX(90) scale(0.9);
+
+.s41 {  
+  #fb_db: up(80);
+  #fb_db_logo: up(80);
+  #fb_db_d: up(200) hide rotateX(-90) delay(0);
+  #fb_db_d2: up(400) hide rotateX(-90) delay(0.2);
+  #fb_db_s: up(800) rotateX(-90) show delay(0.4);
 }
 #fb_q{ 
   color: white;
@@ -549,7 +548,7 @@ presentation.s3 { background-color: black; }
 .s42 {
   #fb_db: up(100) hide;
   #fb_db_logo: up(100) hide;
-  #fb_db_s: up(800) rotate(-90) hide delay(0);
+  #fb_db_s: up(800) rotateX(-90) hide delay(0);
   #bg { opacity: 0;}
   #fb_q: show up(300) delay(0.4);  
 }
@@ -560,7 +559,7 @@ presentation.s3 { background-color: black; }
   text-align: center;
 }
 #fb_fs_logo{ 
-  ::down(400) left(350);
+  ::down(400) left(300);
   img { width: 128px; height: 128px;}
 }
 .s43 {
@@ -582,15 +581,15 @@ presentation.s3 { background-color: black; }
   b { color: green; }
 }
 .s44 {  
-  #fb_fs: up(200) delay(0.2);
-  #fb_fs_logo: up(200) delay(0.3);
+  #fb_fs: up(140) delay(0.2);
+  #fb_fs_logo: up(140) delay(0.3);
   #fb_fs_d: show up(400);
 }
 .s45 {  
   #fb_fs: up(200);
   #fb_fs_logo: up(200);
   #fb_fs_d: up(200) delay(0.4);
-  #fb_fs_d2: show up(400);
+  #fb_fs_d2: show up(500);
 }
 #fb_fs_d3: left(800) scale(2,2);
 
@@ -599,22 +598,22 @@ presentation.s3 { background-color: black; }
   #fb_fs_d2: right(800) hide delay(0.2);
   #fb_fs_d3: right(800) show delay(0.4);
 }
-#fb_fs_d4: left(800) scale(2,2);
+#fb_fs_d4: left(800) scale(1.5);
 .s47 {
   #fb_fs_d3: right(800) hide delay(0.2);
   #fb_fs_d4: right(800) show;  
 }
-#fb_fs_s: left(800) down(400);
+#fb_fs_s: left(800) down(350) scale(0.75);
 
 .s48 {
-  #fb_fs: up(170);
-  #fb_fs_logo: up(170);
+  #fb_fs: up(0);
+  #fb_fs_logo: up(0);
 
   #fb_fs_d4: right(800) hide delay(0.2);
   #fb_fs_s: right(800) show;  
 }
 .s49 {
-  #fb_fs_s: up(800);
+  #fb_fs_s: up(600);
 }
 #data_rela {
   color: white;
@@ -627,7 +626,7 @@ presentation.s3 { background-color: black; }
 .s50 {
   #fb_fs: up(170) hide;
   #fb_fs_logo: up(170) hide;
-  #fb_fs_s: up(600) rotate(-80) hide;
+  #fb_fs_s: up(600) rotateX(-80) hide;
   #bg { opacity: 0;}
   #data_rela: up(500) show;
 }
@@ -648,7 +647,7 @@ presentation.s3 { background-color: black; }
   ::down(400) right(80);
   font-size: 6vw;
 }
-#csql_logo: down(400) left(400);
+#csql_logo: down(400) left(200);
 
 .s52 {
   #bg { opacity: 1;}
@@ -662,19 +661,21 @@ presentation.s3 { background-color: black; }
   ::down(500);
 }
 .s53 {
-  #csql: up(300);
-  #csql_logo: up(300);
+  #csql: up(200);
+  #csql_logo: up(200);
   #csql_d: up(500) show;
 }
 #csql_d2 {
+  border-top: solid 1px #444;  
+  padding-top: 20px;
   text-align: justify;width: 80vw;
   ::down(500);
   b { color: green;}
 }
 .s54 {
-  #csql: up(200);
-  #csql_logo: up(200);
-  #csql_d: up(200) delay(0.3);
+  #csql: up(100);
+  #csql_logo: up(100);
+  #csql_d: up(100) delay(0.3);
   #csql_d2: up(300) show delay(0.4);
 }
 #data_scale {
@@ -708,7 +709,7 @@ presentation.s3 { background-color: black; }
   ::down(400) right(80);
   font-size: 6vw;
 }
-#spanner_logo: down(400) left(400);
+#spanner_logo: down(400) left(300);
 
 .s57 {
   #bg { opacity: 1;}
@@ -726,94 +727,136 @@ presentation.s3 { background-color: black; }
 #spanner_d3: down(500);
 
 .s58 {
-  #spanner: up(300);
-  #spanner_logo: up(300);
+  #spanner: up(200);
+  #spanner_logo: up(200);
   #spanner_d: up(500) show;
 }
 .s59 {
-  #spanner: up(200);
-  #spanner_logo: up(200);
-  #spanner_d: up(200);
-  #spanner_d2: up(400) show;  
+  #spanner: up(100);
+  #spanner_logo: up(100);
+  #spanner_d: up(50);
+  #spanner_d2: up(300) show;  
 }
 .s60 {
   #spanner: up(50);
   #spanner_logo: up(50);
   #spanner_d: up(100);
   #spanner_d2: up(100);
-  #spanner_d3: up(250) show;  
+  #spanner_d3: up(230) show;  
 }
 
-#spanner_s: left(800) rotate(0,90) scale(0.8,0.8) down(80);
+#spanner_s: left(800) rotateY(90) scale(0.6,0.55) down(60);
 .s61 {
-  #spanner_d: right(500) rotate(0,-90) hide;
-  #spanner_d2: right(500) rotate(0,-90) hide;
-  #spanner_d3: right(500) rotate(0,-90) hide;
-  #spanner_s: right(800) rotate(0,-90) show delay(0.3);
+  #spanner_d: right(500) rotateY(-90) hide;
+  #spanner_d2: right(500) rotateY(-90) hide;
+  #spanner_d3: right(500) rotateY(-90) hide;
+  #spanner_s: right(800) rotateY(-90) show delay(0.3);
 }
 #enough {
   color: white;
   font-size: 10vw;
-  ::scale(4,4);
+  ::scale(4);
 }
 .s62 {
   #spanner: up(250) hide;
   #spanner_logo: up(250) hide;
-  #spanner_s: down(400) rotate(90) delay(0) hide;  
+  #spanner_s: down(400) rotateX(90) delay(0) hide;  
   #bg { opacity: 0;}
-  #enough: scale(-3,-3) show delay(0.4);
+  #enough: scale(1) show delay(0.4);
 }
-#review{  ::rotate(0,-90); color: white; font-size: 6vw; }
+#review{  ::rotateY(-90); color: white; font-size: 6vw; }
 .s63 {
-  #enough: rotate(0,90) hide delay(0);
-  #review: rotate(0,90) show delay(0.3);
+  #enough: rotateY(90) hide delay(0);
+  #review: rotateY(90) show delay(0.3);
 }
 #structural {
   width: 80vh;
   padding-left: 20px;
   font-family: 'Fira Code';
   font-size: 3vh;
-  border-top: solid 5px yellow;
+  border-top: solid 1px yellow;
   text-align: justify;
   color: white;
-  ::left(1000) rotate(0,0,90);
+  ::left(1000) rotateZ(90) down(50);
 }
 .s64 {
-  #review: up(550) delay(0);
-  #structural: show right(390) delay(0.2);  
+  #review: up(350) delay(0);
+  #structural: show right(605) delay(0.2);  
 }
 .s65 {
   #review { border-bottom: solid 2px #AAA;}
 
-  #cloud_storage { transform: translate(177px,-360px); opacity: 1; visibility: visible; color: white;}
-  #cloud_storage_logo { transform: translate(-497px,-360px); opacity: 1; visibility: visible; color: white;}
+  #cloud_storage { transform: translate(-30px,-200px) scale(0.5); opacity: 1; visibility: visible; color: white;}
+  #cloud_storage_logo { transform: translate(-330px,-200px) scale(0.5); opacity: 1; visibility: visible; color: white;}
 }
 .s66 {
-  #bigtable { transform: translate(-92px,-240px); opacity: 1; visibility: visible; color: white;}
-  #bigtable_logo { transform: translate(-497px,-240px); opacity: 1; visibility: visible; color: white;}
+  #bigtable { transform: translate(-142px,-130px) scale(0.5); opacity: 1; visibility: visible; color: white;}
+  #bigtable_logo { transform: translate(-330px,-130px) scale(0.5); opacity: 1; visibility: visible; color: white;}
 }
 .s67 {  
-  #bigquery { transform: translate(-220px,-120px); opacity: 1; visibility: visible; color: white;}
-  #bigquery_logo { transform: translate(-497px,-120px); opacity: 1; visibility: visible; color: white;}
+  #bigquery { transform: translate(-196px,-60px) scale(0.5); opacity: 1; visibility: visible; color: white;}
+  #bigquery_logo { transform: translate(-330px,-60px) scale(0.5); opacity: 1; visibility: visible; color: white;}
 }
 .s68 {  
-  #datastore { transform: translate(-60px,0); opacity: 1; visibility: visible; color: white;}
-  #datastore_logo { transform: translate(-497px,0); opacity: 1; visibility: visible; color: white;}
+  #datastore { transform: translate(-130px,10px) scale(0.5); opacity: 1; visibility: visible; color: white;}
+  #datastore_logo { transform: translate(-330px,10px) scale(0.5); opacity: 1; visibility: visible; color: white;}
 }
 .s69 {  
-  #fb_db { transform: translate(52px,140px); opacity: 1; visibility: visible; color: white;}
-  #fb_db_logo { transform: translate(-497px,140px); opacity: 1; visibility: visible; color: white;}
+  #fb_db { transform: translate(-82px,80px) scale(0.5); opacity: 1; visibility: visible; color: white;}
+  #fb_db_logo { transform: translate(-330px,80px) scale(0.5); opacity: 1; visibility: visible; color: white;}
 }
 .s70 {  
-  #fb_fs { transform: translate(-85px,260px); opacity: 1; visibility: visible; color: white;}
-  #fb_fs_logo { transform: translate(-497px,260px); opacity: 1; visibility: visible; color: white;}
+  #fb_fs { transform: translate(-135px,150px) scale(0.5); opacity: 1; visibility: visible; color: white;}
+  #fb_fs_logo { transform: translate(-330px,150px) scale(0.5); opacity: 1; visibility: visible; color: white;}
 }
 .s71 {  
-  #csql { transform: translate(-190px,385px); opacity: 1; visibility: visible; color: white;}
-  #csql_logo { transform: translate(-497px,385px); opacity: 1; visibility: visible; color: white;}
+  #csql { transform: translate(-181px,220px) scale(0.5); opacity: 1; visibility: visible; color: white;}
+  #csql_logo { transform: translate(-330px,220px) scale(0.5); opacity: 1; visibility: visible; color: white;}
 }
 .s72 {  
-  #spanner { transform: translate(-96px,500px); opacity: 1; visibility: visible; color: white;}
-  #spanner_logo { transform: translate(-497px,500px); opacity: 1; visibility: visible; color: white;}
-}
+  #spanner { transform: translate(-140px,290px) scale(0.5); opacity: 1; visibility: visible; color: white;}
+  #spanner_logo { transform: translate(-330px,290px) scale(0.5); opacity: 1; visibility: visible; color: white;}
+
+  #home{ ::left(1350) down(400); a { color: white;} }
   
+}
+#thnx {
+  color: white;
+  font-size: 8vw;
+  ::scale(0.2);
+}
+#slides{ 
+  font-size: 3vw;
+  ::down(500);
+  span { color: #999;}
+  a { text-decoration: none; color: white; }  
+}
+
+.s73 {
+  #review: up(300) hide;
+  #structural: left(400) hide;
+  #cloud_storage_logo,
+  #cloud_storage,
+  #bigtable_logo,
+  #bigquery_logo,
+  #datastore_logo,
+  #bigtable,
+  #bigquery,
+  #datastore,
+  #fb_db,
+  #fb_db_logo,
+  #fb_fs_logo,
+  #fb_fs,
+  #csql,
+  #csql_logo,
+  #spanner,
+  #spanner_logo {
+    opacity: 0; transform: scale(0.3);
+  }
+  #thnx: scale(1) show delay(0.4);
+  #home: up(200) show delay(0.6);
+  #slides: up(250) show delay(0.8);
+  
+}
+
+

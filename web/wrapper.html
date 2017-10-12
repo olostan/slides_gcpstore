@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cloud Storage - Choosing the Best</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=no">
+    <style>
+html, body { padding: 0; margin: 0;}
+body { background-color: #444; text-align: center;}
+iframe { background-color: white; position: relative;top:50%;
+}
+    </style>
+  </head>
+  <body>
+      <div id="loading">Loading...</div>
+      <script>
+            var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 1);
+            var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 1);
+            if ((w/h*1000|0)!=1334) {
+                const fX=1024;
+                const fY=768;
+                let fw, fh;
+                if (w>h) {
+                    fh = h-50;
+                    fw = fh*4/3|0;    
+                } else {
+                    fw = h-50;
+                    fh = fw*3/4|0;    
+                }
+                let scX = fw/fX;
+                let scY = fh/fY;
+                document.getElementById('loading').remove();
+                let iframe = document.createElement('iframe');
+                iframe.src="presentation.html";
+                iframe.frameBorder = 0;
+                iframe.width=fX;
+                iframe.height=fY;
+                iframe.style = `transform: scaleX(${scX}) scaleY(${scY})    `;
+                document.body.appendChild(iframe);
+            } else {
+                window.location="presentation.html";
+            }
+      </script>      
+  </body>
+</html>
